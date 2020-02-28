@@ -1,0 +1,44 @@
+{
+  "name": "bank-api",
+  "version": "1.0.0",
+  "description": "An api endpoint that allows a financial institution perform transactions on the customer account",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set DEBUG=app,app:* & nodemon app.js",
+    "lint": "eslint app.js"
+  },
+  "author": "MattHolmes",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "connect-flash": "0.1.1",
+    "connect-mongo": "3.2.0",
+    "cors": "2.8.5",
+    "csurf": "1.11.0",
+    "debug": "4.1.1",
+    "express": "4.17.1",
+    "express-edge": "2.0.1",
+    "express-session": "1.17.0",
+    "mongoose": "5.9.2",
+    "nodemon": "2.0.2",
+    "passport": "0.4.1",
+    "passport-local": "1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "6.3.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-import": "2.18.2"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": "node_modules/**/node_modules",
+    "delay": 2500,
+    "env": {
+      "NODE_ENV": "production",
+      "PORT": "6000",
+      "MONGODB_URL": "mongodb://localhost/bankApi",
+      "SECRETKEY": "bankspecialunknownsecret"
+    }
+  }
+}
